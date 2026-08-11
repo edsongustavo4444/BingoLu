@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Animal | BingoLu</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+            🐾 BingoLu
+        </a>
+
+        <nav class="menu">
+            <a href="../index.html">Início</a>
+            <a href="buscar.html">Encontrar animal</a>
+            <a href="cadastrar.html">Cadastrar animal</a>
+            <a href="login.html">Entrar</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main class="cadastro-container">
+
+        <div class="cadastro-header">
+
+            <span>📢 NOVO ANÚNCIO</span>
+
+            <h1>Cadastrar animal</h1>
+
+            <p>
+                Preencha as informações abaixo para ajudar a encontrar
+                ou identificar um animal.
+            </p>
+
+        </div>
+
+
+        <form class="cadastro-form">
+
+            <!-- STATUS -->
+            <section class="form-section">
+
+                <h2>🐾 Situação do animal</h2>
+
+                <p class="form-description">
+                    Informe o que aconteceu.
+                </p>
+
+                <div class="status-options">
+
+                    <label class="status-option">
+
+                        <input
+                            type="radio"
+                            name="status"
+                            value="perdido"
+                            checked
+                        >
+
+                        <div>
+                            <strong>🔴 Animal perdido</strong>
+                            <small>Estou procurando meu animal.</small>
+                        </div>
+
+                    </label>
+
+
+                    <label class="status-option">
+
+                        <input
+                            type="radio"
+                            name="status"
+                            value="encontrado"
+                        >
+
+                        <div>
+                            <strong>🟢 Animal encontrado</strong>
+                            <small>Encontrei um animal perdido.</small>
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOTO -->
+            <section class="form-section">
+
+                <h2>📷 Foto do animal</h2>
+
+                <p class="form-description">
+                    Uma boa foto ajuda bastante na identificação.
+                </p>
+
+                <label class="upload-area">
+
+                    <input
+                        type="file"
+                        accept="image/*"
+                    >
+
+                    <div class="upload-content">
+
+                        <span>📸</span>
+
+                        <strong>
+                            Clique para adicionar uma foto
+                        </strong>
+
+                        <small>
+                            JPG, PNG ou WEBP
+                        </small>
+
+                    </div>
+
+                </label>
+
+            </section>
+
+
+            <!-- INFORMAÇÕES -->
+            <section class="form-section">
+
+                <h2>🐶 Informações do animal</h2>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="nome">
+                            Nome do animal
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Ex: Rex"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="tipo">
+                            Tipo de animal
+                        </label>
+
+                        <select id="tipo" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="cachorro">
+                                🐶 Cachorro
+                            </option>
+
+                            <option value="gato">
+                                🐱 Gato
+                            </option>
+
+                            <option value="ave">
+                                🦜 Ave
+                            </option>
+
+                            <option value="outro">
+                                🐾 Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="raca">
+                            Raça
+                        </label>
+
+                        <input
+                            type="text"
+                            id="raca"
+                            placeholder="Ex: Labrador"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="cor">
+                            Cor
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cor"
+                            placeholder="Ex: Caramelo"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="sexo">
+                            Sexo
+                        </label>
+
+                        <select id="sexo">
+
+                            <option value="">
+                                Não informado
+                            </option>
+
+                            <option value="macho">
+                                Macho
+                            </option>
+
+                            <option value="femea">
+                                Fêmea
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOCAL -->
+            <section class="form-section">
+
+                <h2>📍 Localização</h2>
+
+                <p class="form-description">
+                    Informe onde o animal foi perdido ou encontrado.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="cidade">
+                            Cidade
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            placeholder="Ex: Indaiatuba"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="bairro">
+                            Bairro
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bairro"
+                            placeholder="Ex: Centro"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group full">
+
+                        <label for="local">
+                            Local aproximado
+                        </label>
+
+                        <input
+                            type="text"
+                            id="local"
+                            placeholder="Ex: Próximo à praça central"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="data">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DESCRIÇÃO -->
+            <section class="form-section">
+
+                <h2>📝 Mais informações</h2>
+
+                <div class="input-group">
+
+                    <label for="descricao">
+                        Características do animal
+                    </label>
+
+                    <textarea
+                        id="descricao"
+                        rows="5"
+                        placeholder="Descreva características que possam ajudar na identificação..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTATO -->
+            <section class="form-section">
+
+                <h2>📞 Contato</h2>
+
+                <p class="form-description">
+                    Essas informações serão usadas para entrar em contato.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="contato">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contato"
+                            placeholder="Seu nome"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            placeholder="(00) 00000-0000"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTÃO -->
+            <div class="form-actions">
+
+                <a href="../index.html" class="cancel-button">
+                    Cancelar
+                </a>
+
+                <button type="submit" class="submit-button">
+                    📢 Publicar anúncio
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="logo">
+            🐾 BingoLu
+        </div>
+
+        <p>
+            Conectando pessoas para ajudar animais a voltarem para casa. ❤️
+        </p>
+
+        <p class="copyright">
+            © 2026 BingoLu. Projeto acadêmico.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
