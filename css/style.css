@@ -5,11 +5,383 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7faf8;
+    color: #1f2933;
+    line-height: 1.6;
 }
 
-h1 {
-    color: #2e7d32;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #16803c;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4b5563;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #16803c;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 560px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(
+        135deg,
+        #e8f7ee,
+        #f7faf8
+    );
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #d9f3e3;
+    color: #16803c;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #16251c;
+}
+
+.hero h1 span {
+    color: #16803c;
+}
+
+.hero p {
+    max-width: 570px;
+    font-size: 18px;
+    color: #59636e;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 23px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #16803c;
+    color: white;
+}
+
+.primary:hover {
+    background: #11652f;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: white;
+    color: #16803c;
+    border: 2px solid #16803c;
+}
+
+.secondary:hover {
+    background: #e8f7ee;
+}
+
+.hero-image {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 170px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.how,
+.animals {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-title span {
+    color: #16803c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    margin: 10px 0;
+    font-size: 36px;
+    color: #16251c;
+}
+
+.section-title p {
+    color: #68737d;
+}
+
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.step {
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid #e7ece9;
+    transition: 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    background: #e8f7ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.step p {
+    color: #68737d;
+}
+
+
+/* =========================
+   ANIMAIS
+========================= */
+
+.animals {
+    background: #eef7f1;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.animal-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+}
+
+.animal-photo {
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 110px;
+    background: #e8f7ee;
+}
+
+.animal-info {
+    padding: 20px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.lost {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.found {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.animal-info h3 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+}
+
+.animal-info p {
+    color: #68737d;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 45px 8%;
+    background: #14231a;
+    color: white;
+    text-align: center;
+}
+
+.footer .logo {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #cbd5cf;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .steps,
+    .animal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 230px;
+        height: 230px;
+        font-size: 110px;
+    }
+
+    .how,
+    .animals {
+        padding: 60px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
 }
