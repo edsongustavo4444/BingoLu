@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encontrar animal | BingoLu</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buscar.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+            🐾 BingoLu
+        </a>
+
+        <nav class="menu">
+            <a href="../index.html">Início</a>
+            <a href="buscar.html">Encontrar animal</a>
+            <a href="cadastrar.html">Cadastrar animal</a>
+            <a href="login.html">Entrar</a>
+        </nav>
+
+    </header>
+
+
+    <main class="buscar-container">
+
+        <div class="buscar-header">
+
+            <span>🔎 ENCONTRAR</span>
+
+            <h1>Procure um animal</h1>
+
+            <p>
+                Pesquise por animais perdidos ou encontrados
+                na sua região.
+            </p>
+
+        </div>
+
+
+        <!-- FILTROS -->
+
+        <section class="filtros">
+
+            <div class="input-group">
+
+                <label for="pesquisa">
+                    🔎 Nome ou característica
+                </label>
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Ex: Rex, caramelo..."
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="tipo">
+                    🐾 Animal
+                </label>
+
+                <select id="tipo">
+
+                    <option value="">
+                        Todos
+                    </option>
+
+                    <option value="cachorro">
+                        🐶 Cachorros
+                    </option>
+
+                    <option value="gato">
+                        🐱 Gatos
+                    </option>
+
+                    <option value="ave">
+                        🦜 Aves
+                    </option>
+
+                    <option value="outro">
+                        🐾 Outros
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="cidade">
+                    📍 Cidade
+                </label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    placeholder="Ex: Indaiatuba"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="status">
+                    Situação
+                </label>
+
+                <select id="status">
+
+                    <option value="">
+                        Todos
+                    </option>
+
+                    <option value="perdido">
+                        🔴 Perdidos
+                    </option>
+
+                    <option value="encontrado">
+                        🟢 Encontrados
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button class="search-button">
+                🔎 Buscar
+            </button>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+
+        <section class="resultados">
+
+            <div class="resultados-header">
+
+                <h2>Animais cadastrados</h2>
+
+                <span>3 resultados</span>
+
+            </div>
+
+
+            <div class="animal-grid">
+
+
+                <!-- ANIMAL 1 -->
+
+                <article class="animal-card">
+
+                    <div class="animal-photo">
+                        🐶
+                    </div>
+
+                    <div class="animal-info">
+
+                        <span class="status lost">
+                            🔴 Perdido
+                        </span>
+
+                        <h3>Rex</h3>
+
+                        <p>🐕 Cachorro</p>
+
+                        <p>📍 Indaiatuba - SP</p>
+
+                        <a href="#" class="details-button">
+                            Ver detalhes →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ANIMAL 2 -->
+
+                <article class="animal-card">
+
+                    <div class="animal-photo">
+                        🐱
+                    </div>
+
+                    <div class="animal-info">
+
+                        <span class="status found">
+                            🟢 Encontrado
+                        </span>
+
+                        <h3>Luna</h3>
+
+                        <p>🐱 Gato</p>
+
+                        <p>📍 Campinas - SP</p>
+
+                        <a href="#" class="details-button">
+                            Ver detalhes →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ANIMAL 3 -->
+
+                <article class="animal-card">
+
+                    <div class="animal-photo">
+                        🐕
+                    </div>
+
+                    <div class="animal-info">
+
+                        <span class="status lost">
+                            🔴 Perdido
+                        </span>
+
+                        <h3>Thor</h3>
+
+                        <p>🐕 Cachorro</p>
+
+                        <p>📍 Itu - SP</p>
+
+                        <a href="#" class="details-button">
+                            Ver detalhes →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="logo">
+            🐾 BingoLu
+        </div>
+
+        <p>
+            Conectando pessoas para ajudar animais a voltarem para casa. ❤️
+        </p>
+
+        <p class="copyright">
+            © 2026 BingoLu. Projeto acadêmico.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
