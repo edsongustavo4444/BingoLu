@@ -1,0 +1,197 @@
+.buscar-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+.buscar-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.buscar-header span {
+    color: #16803c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.buscar-header h1 {
+    font-size: 42px;
+    margin: 10px 0;
+    color: #16251c;
+}
+
+.buscar-header p {
+    color: #68737d;
+}
+
+
+/* FILTROS */
+
+.filtros {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e4ebe6;
+    border-radius: 18px;
+    margin-bottom: 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    padding: 12px;
+    border: 1px solid #d6ded9;
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #16803c;
+}
+
+.search-button {
+    padding: 12px 20px;
+    background: #16803c;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #11652f;
+}
+
+
+/* RESULTADOS */
+
+.resultados-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.resultados-header h2 {
+    color: #16251c;
+}
+
+.resultados-header span {
+    color: #68737d;
+}
+
+
+/* CARDS */
+
+.resultados .animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.resultados .animal-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #e4ebe6;
+    transition: 0.3s;
+}
+
+.resultados .animal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.resultados .animal-photo {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f7ee;
+    font-size: 110px;
+}
+
+.resultados .animal-info {
+    padding: 20px;
+}
+
+.resultados .animal-info h3 {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.resultados .animal-info p {
+    color: #68737d;
+    margin: 4px 0;
+}
+
+.details-button {
+    display: inline-block;
+    margin-top: 15px;
+    color: #16803c;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 950px) {
+
+    .filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .resultados .animal-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .buscar-container {
+        padding: 45px 15px;
+    }
+
+    .buscar-header h1 {
+        font-size: 34px;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .resultados .animal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resultados-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+}
