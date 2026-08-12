@@ -317,3 +317,24 @@
     object-fit: cover;
     display: block;
 }
+
+/* ===============================
+   BINGOLU - FILTROS
+   =============================== */
+
+.filtros {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.filtros:focus-within {
+    box-shadow: 0 12px 30px rgba(22, 128, 60, 0.12);
+    transform: translateY(-2px);
+}
+
+.input-group label {
+    transition: color 0.2s ease;
+}
+
+.input-group:focus-within label {
+    color: #16803c;
+}
