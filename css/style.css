@@ -511,3 +511,29 @@ a {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
+
+/* ===============================
+   BINGOLU - RODAPÉ
+   =============================== */
+
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .logo {
+    transition: transform 0.25s ease;
+}
+
+.footer .logo:hover {
+    transform: scale(1.05);
+}
+
+.footer p {
+    line-height: 1.6;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    opacity: 0.75;
+}
