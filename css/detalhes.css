@@ -122,4 +122,46 @@
         font-size: 34px;
     }
 
+}/* ===============================
+   BINGOLU - DETALHES DO ANIMAL
+   =============================== */
+
+.detalhes-foto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.detalhes-foto:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.detalhes-foto img {
+    transition: transform 0.4s ease;
+}
+
+.detalhes-foto:hover img {
+    transform: scale(1.03);
+}
+
+.info-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contato-box {
+    box-shadow: 0 8px 20px rgba(22, 128, 60, 0.08);
+}
+
+.botao-contato {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao-contato:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(22, 128, 60, 0.2);
 }
