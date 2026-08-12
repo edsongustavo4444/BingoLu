@@ -413,4 +413,57 @@ a {
         font-size: 22px;
     }
 
-}}
+/* ===============================
+   BINGOLU - MELHORIA DA HOME
+   =============================== */
+
+.hero {
+    overflow: hidden;
+}
+
+.hero h1 {
+    animation: aparecerTitulo 0.7s ease;
+}
+
+.hero p {
+    animation: aparecerTexto 0.9s ease;
+}
+
+@keyframes aparecerTitulo {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes aparecerTexto {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero a,
+.hero button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero a:hover,
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(22, 128, 60, 0.2);
+}}}
