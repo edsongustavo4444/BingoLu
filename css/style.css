@@ -537,3 +537,34 @@ a {
     margin-top: 15px;
     opacity: 0.75;
 }
+
+/* =========================
+   STATUS DOS ANIMAIS
+========================= */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Animal perdido */
+.status.perdido {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Animal encontrado */
+.status.encontrado {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Animal disponível */
+.status.disponivel {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
