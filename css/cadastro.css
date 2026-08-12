@@ -248,4 +248,41 @@
         text-align: center;
     }
 
+/* ===============================
+   BINGOLU - MELHORIA DO FORMULÁRIO
+   =============================== */
+
+.cadastro-form input,
+.cadastro-form select,
+.cadastro-form textarea {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.cadastro-form input:focus,
+.cadastro-form select:focus,
+.cadastro-form textarea:focus {
+    border-color: #16803c;
+    box-shadow: 0 0 0 3px rgba(22, 128, 60, 0.12);
+    outline: none;
+}
+
+.cadastro-form button[type="submit"] {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cadastro-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(22, 128, 60, 0.2);
+}
+
+#preview-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-foto img {
+    max-width: 100%;
+    border: 3px solid #e8f7ee;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}}
