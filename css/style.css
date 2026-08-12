@@ -568,3 +568,39 @@ a {
     background-color: #e3f2fd;
     color: #1565c0;
 }
+
+/* =========================
+   MENSAGENS DO SISTEMA
+========================= */
+
+.mensagem {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* Sucesso */
+.mensagem.sucesso {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+/* Erro */
+.mensagem.erro {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* Informação */
+.mensagem.info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
