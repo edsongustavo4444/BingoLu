@@ -82,9 +82,23 @@ function mostrarAnimais(animais) {
 
         card.innerHTML = `
 
-            <div class="animal-photo">
-                ${emoji}
-            </div>
+           <div class="animal-photo">
+
+    ${
+        animal.foto
+            ? `<img
+                src="${animal.foto}"
+                alt="Foto de ${animal.nome}"
+                style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                "
+            >`
+            : emoji
+    }
+
+</div>
 
             <div class="animal-info">
 
