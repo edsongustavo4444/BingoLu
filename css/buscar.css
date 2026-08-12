@@ -252,3 +252,51 @@
     background: #e8f7ee;
     transform: translateY(-2px);
 }
+
+/* ===============================
+   BINGOLU - CELULAR
+   =============================== */
+
+@media (max-width: 600px) {
+
+    .buscar-container {
+        padding: 35px 15px;
+    }
+
+    .filtros {
+        padding: 18px;
+    }
+
+    .animal-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .animal-card {
+        width: 100%;
+    }
+
+    .animal-photo {
+        min-height: 250px;
+    }
+
+    .animal-info {
+        padding: 18px;
+    }
+
+    .buscar-header h1 {
+        font-size: 32px;
+    }
+
+    .resultados-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .search-button,
+    .clear-button {
+        width: 100%;
+    }
+
+}
