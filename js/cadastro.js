@@ -1,20 +1,7 @@
-
-Isso **não pode existir dentro do arquivo `.js`**. Esses três acentos são usados aqui no chat para mostrar código, mas se eles estiverem realmente no GitHub, o JavaScript quebra.
-
-Além disso, pelo trecho que você mandou, parece que o arquivo também está **sem o `});` final** do evento de cadastro.
-
-Vamos fazer do jeito mais seguro.
-
-## 🛠️ Faça exatamente isso
-
-Abra `js/cadastro.js`, apague **TUDO** e cole **somente o código abaixo**.
-
-**Não copie os ```**, apenas o conteúdo entre eles:
-
-```javascript
 const formulario = document.querySelector(".cadastro-form");
 
 const inputFoto = document.querySelector('input[type="file"]');
+
 const previewFoto = document.querySelector("#preview-foto");
 
 
@@ -57,23 +44,53 @@ inputFoto.addEventListener("change", function () {
 
 
 // ===============================
-// CADASTRO DO ANIMAL
+// CONVERTER FOTO
+// ===============================
+
+function arquivoParaBase64(arquivo) {
+
+    return new Promise((resolve, reject) => {
+
+        const leitor = new FileReader();
+
+        leitor.onload = () => resolve(leitor.result);
+
+        leitor.onerror = erro => reject(erro);
+
+        leitor.readAsDataURL(arquivo);
+
+    });
+
+}
+
+
+// ===============================
+// CADASTRAR ANIMAL
 // ===============================
 
 formulario.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
+
     const statusSelecionado = document.querySelector(
         'input[name="status"]:checked'
     );
-const foto = inputFoto.files[0];
 
-let fotoAnimal = "";
 
-if (foto) {
-    fotoAnimal = await arquivoParaBase64(foto);
-}
+    const foto = inputFoto.files[0];
+
+
+    let fotoAnimal = "";
+
+
+    if (foto) {
+
+        fotoAnimal = await arquivoParaBase64(foto);
+
+    }
+
+
     const animal = {
 
         id: Date.now(),
@@ -82,11 +99,11 @@ if (foto) {
             ? statusSelecionado.value
             : "",
 
-        foto: fotoAnimal,
-        
         nome: document.querySelector("#nome").value,
 
         tipo: document.querySelector("#tipo").value,
+
+        foto: fotoAnimal,
 
         raca: document.querySelector("#raca").value,
 
@@ -110,36 +127,27 @@ if (foto) {
 
     };
 
+
     let animais = JSON.parse(
         localStorage.getItem("bingolu_animais")
     ) || [];
 
+
     animais.push(animal);
+
 
     localStorage.setItem(
         "bingolu_animais",
         JSON.stringify(animais)
     );
 
+
     alert("🐾 Anúncio cadastrado com sucesso!");
 
+
     formulario.reset();
+
 
     window.location.href = "buscar.html";
 
 });
-function arquivoParaBase64(arquivo) {
-
-    return new Promise((resolve, reject) => {
-
-        const leitor = new FileReader();
-
-        leitor.onload = () => resolve(leitor.result);
-
-        leitor.onerror = erro => reject(erro);
-
-        leitor.readAsDataURL(arquivo);
-
-    });
-
-}
