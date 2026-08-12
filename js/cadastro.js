@@ -1,7 +1,20 @@
+
+Isso **não pode existir dentro do arquivo `.js`**. Esses três acentos são usados aqui no chat para mostrar código, mas se eles estiverem realmente no GitHub, o JavaScript quebra.
+
+Além disso, pelo trecho que você mandou, parece que o arquivo também está **sem o `});` final** do evento de cadastro.
+
+Vamos fazer do jeito mais seguro.
+
+## 🛠️ Faça exatamente isso
+
+Abra `js/cadastro.js`, apague **TUDO** e cole **somente o código abaixo**.
+
+**Não copie os ```**, apenas o conteúdo entre eles:
+
+```javascript
 const formulario = document.querySelector(".cadastro-form");
 
 const inputFoto = document.querySelector('input[type="file"]');
-
 const previewFoto = document.querySelector("#preview-foto");
 
 
@@ -51,12 +64,9 @@ formulario.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-
-    const statusSelecionado =
-        document.querySelector(
-            'input[name="status"]:checked'
-        );
-
+    const statusSelecionado = document.querySelector(
+        'input[name="status"]:checked'
+    );
 
     const animal = {
 
@@ -92,28 +102,20 @@ formulario.addEventListener("submit", function (event) {
 
     };
 
-
     let animais = JSON.parse(
         localStorage.getItem("bingolu_animais")
     ) || [];
 
-
     animais.push(animal);
-
 
     localStorage.setItem(
         "bingolu_animais",
         JSON.stringify(animais)
     );
 
-
-    alert(
-        "🐾 Anúncio cadastrado com sucesso!"
-    );
-
+    alert("🐾 Anúncio cadastrado com sucesso!");
 
     formulario.reset();
-
 
     window.location.href = "buscar.html";
 
