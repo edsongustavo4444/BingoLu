@@ -604,3 +604,27 @@ a {
     color: #1565c0;
     border: 1px solid #90caf9;
 }
+
+/* =========================
+   BOTÕES E LINKS GERAIS
+========================= */
+
+.btn,
+.button,
+button {
+    transition: 0.2s ease;
+}
+
+.btn:hover,
+.button:hover,
+button:hover {
+    transform: translateY(-2px);
+}
+
+a {
+    transition: 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
