@@ -194,17 +194,22 @@ botaoBusca.addEventListener(
 );
 
 
-carregarAnimais();
-
 const botaoLimpar = document.querySelector("#limparFiltros");
 
-botaoLimpar.addEventListener("click", function () {
+if (botaoLimpar) {
 
-    campoPesquisa.value = "";
-    campoTipo.value = "";
-    campoCidade.value = "";
-    campoStatus.value = "";
+    botaoLimpar.addEventListener("click", function () {
 
-    carregarAnimais();
+        campoPesquisa.value = "";
+        campoTipo.value = "";
+        campoCidade.value = "";
+        campoStatus.value = "";
 
-});
+        carregarAnimais();
+
+    });
+
+}
+
+
+carregarAnimais();
