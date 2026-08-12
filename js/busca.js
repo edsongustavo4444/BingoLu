@@ -101,12 +101,11 @@ function mostrarAnimais(animais) {
                 </p>
 
                 <a
-                    href="#"
-                    class="details-button"
-                    data-id="${animal.id}"
-                >
-                    Ver detalhes →
-                </a>
+    href="detalhes.html?id=${animal.id}"
+    class="details-button"
+>
+    Ver detalhes →
+</a>
 
             </div>
 
