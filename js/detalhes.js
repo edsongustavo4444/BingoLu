@@ -69,8 +69,23 @@ if (!animal) {
     container.innerHTML = `
 
         <div class="detalhes-foto">
-            ${emoji}
-        </div>
+
+    ${
+        animal.foto
+            ? `<img
+                src="${animal.foto}"
+                alt="Foto de ${animal.nome}"
+                style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                "
+            >`
+            : emoji
+    }
+
+</div>
 
 
         <div class="detalhes-info">
