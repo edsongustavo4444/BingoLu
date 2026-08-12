@@ -211,5 +211,11 @@ if (botaoLimpar) {
 
 }
 
+campoPesquisa.addEventListener("input", filtrarAnimais);
 
+campoCidade.addEventListener("input", filtrarAnimais);
+
+campoTipo.addEventListener("change", filtrarAnimais);
+
+campoStatus.addEventListener("change", filtrarAnimais);
 carregarAnimais();
