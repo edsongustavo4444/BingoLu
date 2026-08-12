@@ -195,3 +195,16 @@ botaoBusca.addEventListener(
 
 
 carregarAnimais();
+
+const botaoLimpar = document.querySelector("#limparFiltros");
+
+botaoLimpar.addEventListener("click", function () {
+
+    campoPesquisa.value = "";
+    campoTipo.value = "";
+    campoCidade.value = "";
+    campoStatus.value = "";
+
+    carregarAnimais();
+
+});
