@@ -62,5 +62,39 @@ formulario.addEventListener("submit", function (event) {
 
 
     window.location.href = "buscar.html";
+const inputFoto = document.querySelector('input[type="file"]');
+const previewFoto = document.querySelector("#preview-foto");
 
+inputFoto.addEventListener("change", function () {
+
+    const arquivo = inputFoto.files[0];
+
+    if (!arquivo) {
+        previewFoto.innerHTML = "";
+        return;
+    }
+
+    const leitor = new FileReader();
+
+    leitor.onload = function (evento) {
+
+        previewFoto.innerHTML = `
+            <img
+                src="${evento.target.result}"
+                alt="Prévia da foto do animal"
+                style="
+                    max-width: 250px;
+                    max-height: 250px;
+                    border-radius: 15px;
+                    margin-top: 15px;
+                    object-fit: cover;
+                "
+            >
+        `;
+
+    };
+
+    leitor.readAsDataURL(arquivo);
+
+});
 });
