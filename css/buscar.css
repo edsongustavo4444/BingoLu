@@ -195,3 +195,39 @@
     }
 
 }
+
+/* ===============================
+   MELHORIA DOS CARDS - BINGOLU
+   =============================== */
+
+.animal-card {
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.animal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.animal-photo {
+    overflow: hidden;
+}
+
+.animal-photo img {
+    transition: transform 0.3s ease;
+}
+
+.animal-card:hover .animal-photo img {
+    transform: scale(1.05);
+}
+
+.details-button {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.details-button:hover {
+    transform: translateX(4px);
+    opacity: 0.9;
+}
