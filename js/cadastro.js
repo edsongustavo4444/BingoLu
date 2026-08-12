@@ -128,7 +128,18 @@ if (!telefone) {
     alert("⚠️ Informe um telefone para contato.");
     return;
 }
-    
+
+ if (telefone.replace(/\D/g, "").length < 10) {
+    alert("⚠️ Informe um telefone válido com DDD.");
+    return;
+}
+
+const data = document.querySelector("#data").value;
+
+if (!data) {
+    alert("⚠️ Informe a data do desaparecimento ou encontro.");
+    return;
+}   
     const foto = inputFoto.files[0];
 
 
