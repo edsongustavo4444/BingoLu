@@ -384,4 +384,33 @@ a {
         font-size: 29px;
     }
 
-}
+/* ===============================
+   BINGOLU - HEADER NO CELULAR
+   =============================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 18px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 7px 9px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+}}
