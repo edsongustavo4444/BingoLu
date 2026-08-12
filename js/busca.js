@@ -156,9 +156,9 @@ function filtrarAnimais() {
     const filtrados = animais.filter(animal => {
 
         const combinaPesquisa =
-            animal.nome.toLowerCase().includes(pesquisa) ||
-            animal.cor.toLowerCase().includes(pesquisa) ||
-            animal.descricao.toLowerCase().includes(pesquisa);
+    (animal.nome || "").toLowerCase().includes(pesquisa) ||
+    (animal.cor || "").toLowerCase().includes(pesquisa) ||
+    (animal.descricao || "").toLowerCase().includes(pesquisa);
 
 
         const combinaTipo =
