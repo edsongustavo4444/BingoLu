@@ -60,14 +60,20 @@ inputFoto.addEventListener("change", function () {
 // CADASTRO DO ANIMAL
 // ===============================
 
-formulario.addEventListener("submit", function (event) {
+formulario.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
     const statusSelecionado = document.querySelector(
         'input[name="status"]:checked'
     );
+const foto = inputFoto.files[0];
 
+let fotoAnimal = "";
+
+if (foto) {
+    fotoAnimal = await arquivoParaBase64(foto);
+}
     const animal = {
 
         id: Date.now(),
@@ -76,6 +82,8 @@ formulario.addEventListener("submit", function (event) {
             ? statusSelecionado.value
             : "",
 
+        foto: fotoAnimal,
+        
         nome: document.querySelector("#nome").value,
 
         tipo: document.querySelector("#tipo").value,
@@ -120,3 +128,18 @@ formulario.addEventListener("submit", function (event) {
     window.location.href = "buscar.html";
 
 });
+function arquivoParaBase64(arquivo) {
+
+    return new Promise((resolve, reject) => {
+
+        const leitor = new FileReader();
+
+        leitor.onload = () => resolve(leitor.result);
+
+        leitor.onerror = erro => reject(erro);
+
+        leitor.readAsDataURL(arquivo);
+
+    });
+
+}
