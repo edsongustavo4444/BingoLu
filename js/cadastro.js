@@ -77,7 +77,58 @@ formulario.addEventListener("submit", async function (event) {
         'input[name="status"]:checked'
     );
 
+// ===============================
+// VALIDAÇÃO DO CADASTRO
+// ===============================
 
+const nome = document.querySelector("#nome").value.trim();
+const tipo = document.querySelector("#tipo").value;
+const cidade = document.querySelector("#cidade").value.trim();
+const bairro = document.querySelector("#bairro").value.trim();
+const descricao = document.querySelector("#descricao").value.trim();
+const contato = document.querySelector("#contato").value.trim();
+const telefone = document.querySelector("#telefone").value.trim();
+
+if (!statusSelecionado) {
+    alert("⚠️ Selecione se o animal está perdido ou encontrado.");
+    return;
+}
+
+if (!nome) {
+    alert("⚠️ Informe o nome do animal.");
+    return;
+}
+
+if (!tipo) {
+    alert("⚠️ Selecione o tipo do animal.");
+    return;
+}
+
+if (!cidade) {
+    alert("⚠️ Informe a cidade.");
+    return;
+}
+
+if (!bairro) {
+    alert("⚠️ Informe o bairro.");
+    return;
+}
+
+if (!descricao) {
+    alert("⚠️ Informe uma descrição do animal.");
+    return;
+}
+
+if (!contato) {
+    alert("⚠️ Informe o nome do responsável.");
+    return;
+}
+
+if (!telefone) {
+    alert("⚠️ Informe um telefone para contato.");
+    return;
+}
+    
     const foto = inputFoto.files[0];
 
 
@@ -99,31 +150,13 @@ formulario.addEventListener("submit", async function (event) {
             ? statusSelecionado.value
             : "",
 
-        nome: document.querySelector("#nome").value,
-
-        tipo: document.querySelector("#tipo").value,
-
-        foto: fotoAnimal,
-
-        raca: document.querySelector("#raca").value,
-
-        cor: document.querySelector("#cor").value,
-
-        sexo: document.querySelector("#sexo").value,
-
-        cidade: document.querySelector("#cidade").value,
-
-        bairro: document.querySelector("#bairro").value,
-
-        local: document.querySelector("#local").value,
-
-        data: document.querySelector("#data").value,
-
-        descricao: document.querySelector("#descricao").value,
-
-        contato: document.querySelector("#contato").value,
-
-        telefone: document.querySelector("#telefone").value
+       nome: nome,
+tipo: tipo,
+cidade: cidade,
+bairro: bairro,
+descricao: descricao,
+contato: contato,
+telefone: telefone
 
     };
 
