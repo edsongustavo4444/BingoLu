@@ -232,35 +232,6 @@ document.addEventListener("click", function (event) {
 
     if (!botaoFavorito) return;
 
-    event.preventDefault();
-
-    const id = String(botaoFavorito.dataset.id);
-
-    let favoritos = JSON.parse(
-        localStorage.getItem("bingolu_favoritos")
-    ) || [];
-
-    favoritos = favoritos.map(String);
-
-    if (favoritos.includes(id)) {
-
-        favoritos = favoritos.filter(
-            favoritoId => favoritoId !== id
-        );
-
-        botaoFavorito.textContent = "♡ Favoritar";
-
-    } else {
-
-        favoritos.push(id);
-
-        botaoFavorito.textContent = "❤️ Favoritado";
-
-    }
-
-    localStorage.setItem(
-        "bingolu_favoritos",
-        JSON.stringify(favoritos)
-    );
+    botaoFavorito.textContent = "❤️ Favoritado";
 
 });
