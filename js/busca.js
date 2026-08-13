@@ -113,7 +113,13 @@ function mostrarAnimais(animais) {
                 <p>
                     📍 ${animal.cidade} - ${animal.bairro}
                 </p>
-
+<button
+    class="favorite-button"
+    data-id="${animal.id}"
+    title="Adicionar aos favoritos"
+>
+    ♡ Favoritar
+</button>
                 <a
     href="detalhes.html?id=${animal.id}"
     class="details-button"
