@@ -338,3 +338,26 @@
 .input-group:focus-within label {
     color: #16803c;
 }
+
+/* ===============================
+   BOTÃO FAVORITAR
+   =============================== */
+
+.favorite-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 14px;
+    border: 2px solid #e63946;
+    border-radius: 8px;
+    background: white;
+    color: #e63946;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.favorite-button:hover {
+    background: #fff0f1;
+    transform: translateY(-2px);
+}
