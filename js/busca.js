@@ -29,9 +29,11 @@ function mostrarAnimais(animais) {
 
     container.innerHTML = "";
 
-    const favoritos = JSON.parse(
-    localStorage.getItem("bingolu_favoritos")
-) || [];
+    const favoritos = (
+    JSON.parse(
+        localStorage.getItem("bingolu_favoritos")
+    ) || []
+).map(String);
     
     contador.textContent =
         `${animais.length} resultado(s)`;
