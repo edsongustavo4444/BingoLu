@@ -29,6 +29,10 @@ function mostrarAnimais(animais) {
 
     container.innerHTML = "";
 
+    const favoritos = JSON.parse(
+    localStorage.getItem("bingolu_favoritos")
+) || [];
+    
     contador.textContent =
         `${animais.length} resultado(s)`;
 
@@ -118,7 +122,11 @@ function mostrarAnimais(animais) {
     data-id="${animal.id}"
     title="Adicionar aos favoritos"
 >
-    ♡ Favoritar
+    ${
+        favoritos.includes(String(animal.id))
+            ? "❤️ Favoritado"
+            : "♡ Favoritar"
+    }
 </button>
                 <a
     href="detalhes.html?id=${animal.id}"
