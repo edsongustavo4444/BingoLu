@@ -226,3 +226,37 @@ campoTipo.addEventListener("change", filtrarAnimais);
 campoStatus.addEventListener("change", filtrarAnimais);
 carregarAnimais();
 
+document.addEventListener("click", function (event) {
+
+    const botaoFavorito = event.target.closest(".favorite-button");
+
+    if (!botaoFavorito) return;
+
+    const id = botaoFavorito.dataset.id;
+
+    let favoritos = JSON.parse(
+        localStorage.getItem("bingolu_favoritos")
+    ) || [];
+
+    if (favoritos.includes(id)) {
+
+        favoritos = favoritos.filter(
+            favoritoId => favoritoId !== id
+        );
+
+        botaoFavorito.innerHTML = "♡ Favoritar";
+
+    } else {
+
+        favoritos.push(id);
+
+        botaoFavorito.innerHTML = "❤️ Favoritado";
+
+    }
+
+    localStorage.setItem(
+        "bingolu_favoritos",
+        JSON.stringify(favoritos)
+    );
+
+});
