@@ -226,10 +226,6 @@ campoTipo.addEventListener("change", filtrarAnimais);
 campoStatus.addEventListener("change", filtrarAnimais);
 carregarAnimais();
 
-
-
-});
-
 document.addEventListener("click", function (event) {
 
     const botaoFavorito = event.target.closest(".favorite-button");
