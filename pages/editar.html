@@ -1,0 +1,349 @@
+# editar.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar animal | BingoLu</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastrar.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+            🐾 BingoLu
+        </a>
+
+        <nav class="menu">
+
+            <a href="../index.html">
+                Início
+            </a>
+
+            <a href="buscar.html">
+                Encontrar animal
+            </a>
+
+            <a href="cadastrar.html">
+                Cadastrar animal
+            </a>
+
+            <a href="favoritos.html">
+                ❤️ Favoritos
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main class="cadastro-container">
+
+        <div class="cadastro-header">
+
+            <span>✏️ EDITAR ANÚNCIO</span>
+
+            <h1>Editar animal</h1>
+
+            <p>
+                Atualize as informações do animal.
+            </p>
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+        <form id="formEditar" class="cadastro-form">
+
+            <!-- FOTO -->
+            <div class="input-group">
+
+                <label for="foto">
+                    📷 Foto do animal
+                </label>
+
+                <input
+                    type="file"
+                    id="foto"
+                    accept="image/*"
+                >
+
+                <div
+                    id="preview-foto"
+                    class="preview-foto"
+                ></div>
+
+            </div>
+
+
+            <!-- STATUS -->
+            <div class="input-group">
+
+                <label for="status">
+                    Situação *
+                </label>
+
+                <select id="status" required>
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="perdido">
+                        🔴 Animal perdido
+                    </option>
+
+                    <option value="encontrado">
+                        🟢 Animal encontrado
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- NOME -->
+            <div class="input-group">
+
+                <label for="nome">
+                    🐾 Nome do animal *
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    required
+                >
+
+            </div>
+
+
+            <!-- TIPO -->
+            <div class="input-group">
+
+                <label for="tipo">
+                    Tipo de animal *
+                </label>
+
+                <select id="tipo" required>
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="cachorro">
+                        🐶 Cachorro
+                    </option>
+
+                    <option value="gato">
+                        🐱 Gato
+                    </option>
+
+                    <option value="ave">
+                        🦜 Ave
+                    </option>
+
+                    <option value="outro">
+                        🐾 Outro
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- RAÇA -->
+            <div class="input-group">
+
+                <label for="raca">
+                    🧬 Raça
+                </label>
+
+                <input
+                    type="text"
+                    id="raca"
+                >
+
+            </div>
+
+
+            <!-- COR -->
+            <div class="input-group">
+
+                <label for="cor">
+                    🎨 Cor *
+                </label>
+
+                <input
+                    type="text"
+                    id="cor"
+                    required
+                >
+
+            </div>
+
+
+            <!-- SEXO -->
+            <div class="input-group">
+
+                <label for="sexo">
+                    ⚥ Sexo
+                </label>
+
+                <select id="sexo">
+
+                    <option value="">
+                        Não informado
+                    </option>
+
+                    <option value="macho">
+                        Macho
+                    </option>
+
+                    <option value="femea">
+                        Fêmea
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- CIDADE -->
+            <div class="input-group">
+
+                <label for="cidade">
+                    📍 Cidade *
+                </label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BAIRRO -->
+            <div class="input-group">
+
+                <label for="bairro">
+                    🏠 Bairro *
+                </label>
+
+                <input
+                    type="text"
+                    id="bairro"
+                    required
+                >
+
+            </div>
+
+
+            <!-- DATA -->
+            <div class="input-group">
+
+                <label for="data">
+                    📅 Data *
+                </label>
+
+                <input
+                    type="date"
+                    id="data"
+                    required
+                >
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+            <div class="input-group">
+
+                <label for="descricao">
+                    📝 Informações adicionais
+                </label>
+
+                <textarea
+                    id="descricao"
+                    rows="5"
+                ></textarea>
+
+            </div>
+
+
+            <!-- CONTATO -->
+            <div class="input-group">
+
+                <label for="contato">
+                    📞 Telefone ou contato *
+                </label>
+
+                <input
+                    type="text"
+                    id="contato"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BOTÕES -->
+            <div class="form-buttons">
+
+                <a
+                    href="buscar.html"
+                    class="btn secondary"
+                >
+                    ← Cancelar
+                </a>
+
+                <button
+                    type="submit"
+                    class="btn primary"
+                >
+                    💾 Salvar alterações
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="logo">
+            🐾 BingoLu
+        </div>
+
+        <p>
+            Conectando pessoas para ajudar animais a voltarem para casa. ❤️
+        </p>
+
+        <p class="copyright">
+            © 2026 BingoLu. Projeto acadêmico.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/editar.js"></script>
+
+</body>
+
+</html>
+```
