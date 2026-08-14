@@ -1,8 +1,5 @@
 const container = document.querySelector("#detalhesAnimal");
 
-const botaoEditar = document.querySelector("#editarAnimal");
-const botaoExcluir = document.querySelector("#excluirAnimal");
-
 
 const parametros = new URLSearchParams(
     window.location.search
@@ -44,16 +41,6 @@ if (!animal) {
         </div>
 
     `;
-
-
-    if (botaoEditar) {
-        botaoEditar.style.display = "none";
-    }
-
-    if (botaoExcluir) {
-        botaoExcluir.style.display = "none";
-    }
-
 
 } else {
 
@@ -181,62 +168,66 @@ if (!animal) {
 
     `;
 
-
-    if (botaoExcluir) {
-
-        botaoExcluir.addEventListener(
-            "click",
-            function () {
-                alert("BOTÃO EXCLUIR FUNCIONOU!");
-
-                const confirmar = confirm(
-                    `Tem certeza que deseja excluir ${animal.nome}?`
-                );
-
-
-                if (!confirmar) {
-                    return;
-                }
-
-
-                const animaisAtualizados = animais.filter(
-                    item => String(item.id) !== String(id)
-                );
-
-
-                localStorage.setItem(
-                    "bingolu_animais",
-                    JSON.stringify(animaisAtualizados)
-                );
-
-
-                let favoritos = JSON.parse(
-                    localStorage.getItem("bingolu_favoritos")
-                ) || [];
-
-
-                favoritos = favoritos.filter(
-                    favoritoId =>
-                        String(favoritoId) !== String(id)
-                );
-
-
-                localStorage.setItem(
-                    "bingolu_favoritos",
-                    JSON.stringify(favoritos)
-                );
-
-
-                alert(
-                    "🐾 Animal excluído com sucesso!"
-                );
-
-
-                window.location.href = "buscar.html";
-
-            }
-        );
-
-    }
-
 }
+
+
+/* ===============================
+   EXCLUIR ANIMAL
+   =============================== */
+
+document.addEventListener("click", function (event) {
+
+    const botaoExcluir =
+        event.target.closest("#excluirAnimal");
+
+
+    if (!botaoExcluir) return;
+
+
+    if (!animal) return;
+
+
+    const confirmar = confirm(
+        `Tem certeza que deseja excluir ${animal.nome}?`
+    );
+
+
+    if (!confirmar) return;
+
+
+    const animaisAtualizados = animais.filter(
+        item => String(item.id) !== String(id)
+    );
+
+
+    localStorage.setItem(
+        "bingolu_animais",
+        JSON.stringify(animaisAtualizados)
+    );
+
+
+    let favoritos = JSON.parse(
+        localStorage.getItem("bingolu_favoritos")
+    ) || [];
+
+
+    favoritos = favoritos.filter(
+        favoritoId =>
+            String(favoritoId) !== String(id)
+    );
+
+
+    localStorage.setItem(
+        "bingolu_favoritos",
+        JSON.stringify(favoritos)
+    );
+
+
+    alert(
+        "🐾 Animal excluído com sucesso!"
+    );
+
+
+    window.location.href = "buscar.html";
+
+});
