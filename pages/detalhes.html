@@ -13,6 +13,7 @@
 
 <body>
 
+    <!-- CABEÇALHO -->
     <header class="header">
 
         <a href="../index.html" class="logo">
@@ -20,15 +21,33 @@
         </a>
 
         <nav class="menu">
-            <a href="../index.html">Início</a>
-            <a href="buscar.html">Encontrar animal</a>
-            <a href="cadastrar.html">Cadastrar animal</a>
-            <a href="login.html">Entrar</a>
+
+            <a href="../index.html">
+                Início
+            </a>
+
+            <a href="buscar.html">
+                Encontrar animal
+            </a>
+
+            <a href="cadastrar.html">
+                Cadastrar animal
+            </a>
+
+            <a href="favoritos.html">
+                ❤️ Favoritos
+            </a>
+
+            <a href="login.html">
+                Entrar
+            </a>
+
         </nav>
 
     </header>
 
 
+    <!-- PRINCIPAL -->
     <main class="detalhes-container">
 
         <a href="buscar.html" class="voltar">
@@ -36,15 +55,45 @@
         </a>
 
 
-        <section id="detalhesAnimal" class="detalhes-card">
+        <section
+            id="detalhesAnimal"
+            class="detalhes-card"
+        >
 
-            <!-- O JavaScript vai colocar as informações aqui -->
+            <!--
+                O JavaScript vai colocar
+                as informações do animal aqui
+            -->
+
+        </section>
+
+
+        <!-- AÇÕES DO ANIMAL -->
+        <section class="acoes-animal">
+
+            <button
+                id="editarAnimal"
+                class="editar-button"
+                type="button"
+            >
+                ✏️ Editar animal
+            </button>
+
+
+            <button
+                id="excluirAnimal"
+                class="excluir-button"
+                type="button"
+            >
+                🗑️ Excluir animal
+            </button>
 
         </section>
 
     </main>
 
 
+    <!-- RODAPÉ -->
     <footer class="footer">
 
         <div class="logo">
@@ -62,6 +111,7 @@
     </footer>
 
 
+    <!-- JAVASCRIPT -->
     <script src="../js/detalhes.js"></script>
 
 </body>
