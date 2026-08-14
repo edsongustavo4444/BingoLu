@@ -187,6 +187,7 @@ if (!animal) {
         botaoExcluir.addEventListener(
             "click",
             function () {
+                alert("BOTÃO EXCLUIR FUNCIONOU!");
 
                 const confirmar = confirm(
                     `Tem certeza que deseja excluir ${animal.nome}?`
