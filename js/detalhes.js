@@ -1,5 +1,8 @@
 const container = document.querySelector("#detalhesAnimal");
 
+const botaoEditar = document.querySelector("#editarAnimal");
+const botaoExcluir = document.querySelector("#excluirAnimal");
+
 
 const parametros = new URLSearchParams(
     window.location.search
@@ -42,6 +45,16 @@ if (!animal) {
 
     `;
 
+
+    if (botaoEditar) {
+        botaoEditar.style.display = "none";
+    }
+
+    if (botaoExcluir) {
+        botaoExcluir.style.display = "none";
+    }
+
+
 } else {
 
     const emoji =
@@ -70,22 +83,22 @@ if (!animal) {
 
         <div class="detalhes-foto">
 
-    ${
-        animal.foto
-            ? `<img
-                src="${animal.foto}"
-                alt="Foto de ${animal.nome}"
-                style="
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 20px;
-                "
-            >`
-            : emoji
-    }
+            ${
+                animal.foto
+                    ? `<img
+                        src="${animal.foto}"
+                        alt="Foto de ${animal.nome}"
+                        style="
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 20px;
+                        "
+                    >`
+                    : emoji
+            }
 
-</div>
+        </div>
 
 
         <div class="detalhes-info">
@@ -167,5 +180,62 @@ if (!animal) {
         </div>
 
     `;
+
+
+    if (botaoExcluir) {
+
+        botaoExcluir.addEventListener(
+            "click",
+            function () {
+
+                const confirmar = confirm(
+                    `Tem certeza que deseja excluir ${animal.nome}?`
+                );
+
+
+                if (!confirmar) {
+                    return;
+                }
+
+
+                const animaisAtualizados = animais.filter(
+                    item => String(item.id) !== String(id)
+                );
+
+
+                localStorage.setItem(
+                    "bingolu_animais",
+                    JSON.stringify(animaisAtualizados)
+                );
+
+
+                let favoritos = JSON.parse(
+                    localStorage.getItem("bingolu_favoritos")
+                ) || [];
+
+
+                favoritos = favoritos.filter(
+                    favoritoId =>
+                        String(favoritoId) !== String(id)
+                );
+
+
+                localStorage.setItem(
+                    "bingolu_favoritos",
+                    JSON.stringify(favoritos)
+                );
+
+
+                alert(
+                    "🐾 Animal excluído com sucesso!"
+                );
+
+
+                window.location.href = "buscar.html";
+
+            }
+        );
+
+    }
 
 }
