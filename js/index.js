@@ -8,6 +8,11 @@ function carregarAnimaisRecentes() {
     ) || [];
 
 
+    const favoritos = JSON.parse(
+        localStorage.getItem("bingolu_favoritos")
+    ) || [];
+
+
     containerRecentes.innerHTML = "";
 
 
@@ -76,6 +81,12 @@ function carregarAnimaisRecentes() {
                 : "🟢 Encontrado";
 
 
+        const id = String(animal.id);
+
+        const jaFavoritado =
+            favoritos.map(String).includes(id);
+
+
         card.innerHTML = `
 
             <div class="animal-photo">
@@ -117,6 +128,20 @@ function carregarAnimaisRecentes() {
                     📍 ${animal.cidade} - ${animal.bairro}
                 </p>
 
+
+                <button
+                    class="favorite-button"
+                    data-id="${animal.id}"
+                    title="Adicionar aos favoritos"
+                >
+                    ${
+                        jaFavoritado
+                            ? "❤️ Favoritado"
+                            : "♡ Favoritar"
+                    }
+                </button>
+
+
                 <a
                     href="pages/detalhes.html?id=${animal.id}"
                     class="details-button"
@@ -134,6 +159,52 @@ function carregarAnimaisRecentes() {
     });
 
 }
+
+
+document.addEventListener("click", function (event) {
+
+    const botaoFavorito =
+        event.target.closest(".favorite-button");
+
+
+    if (!botaoFavorito) return;
+
+
+    const id = String(
+        botaoFavorito.dataset.id
+    );
+
+
+    let favoritos = JSON.parse(
+        localStorage.getItem("bingolu_favoritos")
+    ) || [];
+
+
+    favoritos = favoritos.map(String);
+
+
+    if (favoritos.includes(id)) {
+
+        favoritos = favoritos.filter(
+            favoritoId => favoritoId !== id
+        );
+
+    } else {
+
+        favoritos.push(id);
+
+    }
+
+
+    localStorage.setItem(
+        "bingolu_favoritos",
+        JSON.stringify(favoritos)
+    );
+
+
+    carregarAnimaisRecentes();
+
+});
 
 
 carregarAnimaisRecentes();
