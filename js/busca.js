@@ -56,6 +56,11 @@ function mostrarAnimais(animais) {
         return;
     }
 
+    const favoritos = JSON.parse(
+    localStorage.getItem("bingolu_favoritos")
+) || [];
+
+const favoritosIds = favoritos.map(String);
 
     animais.forEach(animal => {
 
@@ -125,7 +130,7 @@ function mostrarAnimais(animais) {
     title="Adicionar aos favoritos"
 >
     ${
-        favoritos.includes(String(animal.id))
+        favoritosIds.includes(String(animal.id))
             ? "❤️ Favoritado"
             : "♡ Favoritar"
     }
